@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do APP</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="firebase.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="background-image">
+        <img src="./assets/bg-desktop-dark.jpg" alt="BackgroundImage">
+    </div>
+    <div id="todo-item-container" class="todo-item-container">
+        <div class="todo-item-header">
+            <div class="todo-item-title">
+                <h1>TODO</h1>
+            </div>
+            <div class="todo-item-theme">
+            </div>
+        </div>
+        <div class="todo-item-input">
+            <div class="todo-input">
+                <input  id="input-text" class="input" spellcheck="false" type="text" placeholder="Fix your target">
+            </div>
+            <div class="add-item">
+                <div class="add-button">
+                    <button type="button" onclick="addItem()">
+                        <img class="image-pic" autocomplete="new-password" src="./assets/plus-circle.svg" style="width:40px;height:40px;">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="display-content">
+            <div class="items-options">
+                <div class="items-filter">
+                    <button id="all" style="color:hsl(220,98%,61%);" onclick="selectOption('all')">All</button>
+                    <button id="completed" onclick="selectOption('completed')">Completed</button>
+                    <button id="pending" onclick="selectOption('pending')">Pending</button>
+                </div>
+                <div class="clear-completed">
+                    <button id="clear-completed" type="button" onclick="clearCompleted()">Clear Completed</button>
+                </div>
+                <div class="clear-items">
+                    <button  type="button" id="clear-items" onclick="confirmClear()">Clear All</button>
+                </div>
+            </div>
+            <div class="todo-items-list">
+                
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="popup" style="display: none;">
+        <div class="popup-window">
+            <div class="popup-message">
+                Are you sure?
+            </div>
+            <div class="popup-options">
+                <button type="button" onclick="Clearoption('no')">No</button>
+                <button type="button" onclick="Clearoption('yes')">Yes</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,261 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.background-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height:350px;
+    z-index: -1;
+}
+.background-image img{
+    height:100%;
+    width:100%;
+    object-fit:cover;
+    object-position:left;
+}
+body{
+    display:flex;
+    justify-content: center;
+    background-color:hsl(235,21%,12%);
+}
+.todo-item-container{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: space-between;
+    width:700px;
+    margin-top:150px;
+    margin-bottom: 20px;
+}
+.todo-item-header
+{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+}
+.todo-item-title{
+    font-style: bold;
+    color: white;
+    font-size: 25px;
+    letter-spacing: 15px;;
+}
+.todo-item-theme{
+    display: flex;
+    align-items: center;
+}
+.todo-item-input{
+    height:70px;
+    background-color:hsl(235,24%,19%);
+    display:flex;
+    padding: 10px;
+    margin-top:50px;
+    border-radius:6px;
+    align-items:center;
+    justify-content: space-around;
+}
+.todo-input{
+    width:93%;
+    background-color:hsl(235,24%,19%);
+}
+.todo-input input{
+    width:100%;
+    height:100%;
+    background-color:transparent;
+    border:none;
+    outline:none;
+    font-size: 18px;
+    color:rgb(185, 180, 224);
+}
+.add-button,.theme-button{
+    height:60px;
+    width:50px;
+    display: flex;
+    align-items: center;
+}
+.add-button:hover{
+    z-index: 3;
+    width: 53px;
+    height: 53px;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+.add-button button:hover{
+    cursor: pointer;
+}
+.theme-button:hover{
+    z-index: 3;
+    width:53px;
+    cursor:pointer;
+    transition: all 0.25s;;
+}
+.theme-button button:hover{
+    cursor: pointer;
+}
+.display-content{
+    margin-top:40px;
+}
+.items-options{
+    display:flex;
+    justify-content: space-between;
+    padding:10px;
+    background-color:hsl(235,24%,19%);
+    width:100%;
+    height:50px;
+    border-radius: 5px;
+    align-items: center;
+    color:rgb(185, 181, 226);
+    font-size: 20px;
+}
+.items-filter button{
+    padding: 0 8px;
+    cursor: pointer;
+    cursor: pointer;
+    background-color: transparent;
+    border:none;
+    color:rgb(185, 181, 226);
+    font-size: 15px;;
+}
+.clear-completed button{
+    cursor: pointer;
+    background-color: transparent;
+    border:none;
+    color:rgb(185, 181, 226);
+    font-size: 16px;;
+}
+.clear-completed button:hover{
+    color:rgb(36, 121, 25);
+}
+.clear-items button{
+    cursor: pointer;
+    background-color: transparent;
+    border:none;
+    color:rgb(185, 181, 226);
+    font-size: 16px;;
+}
+.items-filter button:hover{
+    color:hsl(220,98%,61%);
+}
+.clear-items button:hover{
+    color:rgb(253, 71, 58);
+}
+.popup{
+    display: flex;
+    justify-content: center;
+    position:absolute;
+    margin-top: 350px;
+}
+.popup ~.todo-item-container{
+    opacity: 0.1;
+    background-color: rgba(0, 0, 0, 0.199);
+}
+.popup-window{
+    background-color: rgb(221, 221, 172);
+    height:150px;
+    width:300px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.popup-message{
+    height:100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: rgb(112, 24, 116);
+    font-weight:bolder;
+    border-bottom: black solid 2px;;
+}
+.popup-options{
+    width:100%;
+    height:50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    transition: all 0.25s ease;
+}
+.popup-options button{
+    height:40px;
+    width:55px;
+    font-size: 20px;
+    background-color: rgb(178, 44, 185);
+    color: white;
+}
+.popup-options button:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 0px 7px 0px hsl(235,21%,11%);
+    border-color: hsl(235,24%,19%);
+    z-index: 10;
+}
+.item{
+    background-color:hsl(235,24%,19%);
+    width:100%;
+    height:70px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding:10px;
+    border-bottom: 1px solid hsl(237,14%,26%);
+    box-shadow: 0px 2px 30px 0px rgba(0,0,0,0.4);
+    transition: all 0.25s ease;
+    z-index: -1;
+}
+.item:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 0px 7px 0px hsl(235,21%,11%);
+    border-color: hsl(235,24%,19%);
+    z-index: 10;
+}
+.content{
+    font-size: 23px;
+    width:90%;
+    cursor:default;
+    color: rgb(230, 228, 247);
+}
+.select-icon{
+    width:5%;
+}
+.select-image{
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    border:2px solid hsl(237,14%,26%);
+}
+.select-image:hover, .select-image.checked{
+    cursor:pointer;
+    background: linear-gradient(135deg,#55DDFF 0%,#C058F3 100%);
+
+}
+.select-icon:hover ~.content, .content.checked{
+    text-decoration: line-through ;
+    color:rgb(185, 181, 226);
+    font-size: 22px;
+    font-style: italic;
+}
+.delete-button{
+    height:60px;
+    width:50px;
+    display: flex;
+    align-items: center;
+}
+.delete-button:hover{
+    z-index: 3;
+    width: 53px;
+    height: 53px;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+.delete-button button:hover{
+    cursor: pointer;
+}
