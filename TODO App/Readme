@@ -1,0 +1,16 @@
+The TODO App 
+--It is used to keep track my tasks so that I won't miss one.
+--I have used HTML,CSS and JavaScript for this App.
+--It is a desktop environment based App.
+--I have used firebase as a backend database.
+--I have incorporated functionalities like
+      --Add task
+      --Delete task
+      --Mark task as completed
+      --View All tasks
+      --View Completed tasks
+      --View Pending tasks
+      --Clear Completed tasks
+      --Clear All tasks
+ --If the tasks are not displayed properly, please click on completed or pending options once.
+ --Applying changes might not be instantaneous because of responses are being brought from the firebase server.It also depends on the Internet speed.
